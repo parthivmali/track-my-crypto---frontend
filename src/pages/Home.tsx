@@ -95,7 +95,7 @@ const Home = () => {
 
     try {
       const response = await axios.get(`${apiUrl}/bookmarks/${userEmail}`);
-      setBookmarks(response.data?.bookmarks?.map(e => e.id) || []);
+      setBookmarks(response.data?.bookmarks?.map((e: any) => e.id) || []);
     } catch (error) {
       console.error("Error fetching bookmarks:", error);
     } finally {

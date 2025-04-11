@@ -60,7 +60,7 @@ const CryptoCard: React.FC<CryptoCardProps> = ({
           <div className="flex justify-between items-center">
             <span className="text-gray-400 text-sm">Price</span>
             <span className="text-white font-semibold">
-              ${price?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 } ?? 0)}
+              ${(price ?? 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
           </div>
 
